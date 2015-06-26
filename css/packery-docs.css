@@ -2407,6 +2407,42 @@ color:#d9a234;
   color:#E3B41E;
 }
 
+/*  Growout Nav */
+
+.growing-nav{
+  height:25px;
+  width:100%;
+  background:#2F6593;
+  float:left;
+  border-bottom:1px solid #fff;
+  color: #fff;
+  text-align: center;
+  transition: height 0.2s ease-out;
+  overflow:hidden;
+}
+
+.growing-nav ul{
+  margin:0 auto; 
+  display:inline-block;
+}
+
+.growing-nav ul li{
+  display:inline-block;
+  float:left;
+  height:25px;
+  line-height: 25px;
+  font-size: 16px;
+  border-right:1px solid #fff;
+  padding:0 50px;
+}
+
+.growing-nav ul li:last-child{
+    border-right:none;
+}
+
+.growing-nav.hidden{
+  height:0px;
+}
 
 
 

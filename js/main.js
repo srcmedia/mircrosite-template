@@ -22,8 +22,20 @@
         scrollTop: $(".single-article").offset().top},
         'slow');
     });
-   
 
+   var iScrollPos = 0;
+   $(window).scroll(function(){
+      var iCurScrollPos = $(this).scrollTop();
+      if (iCurScrollPos > iScrollPos) {
+        //Scrolling Down
+        $('.growing-nav').addClass('hidden');
+        } else {
+       //Scrolling Up
+       $('.growing-nav').removeClass('hidden');
+    }
+    iScrollPos = iCurScrollPos;
+   });
+   
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
